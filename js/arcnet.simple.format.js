@@ -50,6 +50,10 @@
             }else if(data != "" && data.length === 10){
                 return z.telefoneFormat(data)
             }
+        },
+
+        cepFormat: function(data){
+            return (data || "").toString().replace(/^(\d{5})(\d{3})$/, "$1-$2");
         }
 
 
@@ -161,6 +165,11 @@
 
         $('[data-format="celular"]').on("blur", function(){
             $(this).val(z.celularFormat($(this).val()));
+            return true;
+        });
+
+        $('[data-format="cep"]').on("blur", function(){
+            $(this).val(z.cepFormat($(this).val()));
             return true;
         });
     });
