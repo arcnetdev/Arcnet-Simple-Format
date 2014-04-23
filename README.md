@@ -48,10 +48,13 @@ To get your format applied with the data-format attribute just use it in your in
 //the millisecods typel will be converted in date like DD/MM/YY
 
 <input type="text" data-format="telefone" /><br>
-//the string typel will be converted in phone number like (XX) XXXX-XXXX
+//the string typed will be converted in phone number like (XX) XXXX-XXXX
 
 <input type="text" data-format="celular" /><br>
-//the string typel will be converted in cellphone number like (XX) XXXX-XXXX OR (XX) XXXXX-XXXX
+//the string typed will be converted in cellphone number like (XX) XXXX-XXXX OR (XX) XXXXX-XXXX
+
+<input type="text" data-format="cep" /><br>
+//the string typed will be converted in brazil zip code(cep) like XXXXX-XXX
 ```
 
 ###Mask using data-format-realtime attribute
@@ -92,6 +95,9 @@ z.celularFormat(1199998888)
 OR
 z.celularFormat(11999998888)
 //=>(11) 99999-8888
+
+z.cepFormat(11111999)
+//=>11111-999
 ```
 
 #License
